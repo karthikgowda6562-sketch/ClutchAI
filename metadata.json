@@ -1,0 +1,8 @@
+{
+  "name": "Clutch AI",
+  "description": "A friendly daily planner and AI study coach that breaks down your tasks, schedules your calendar, tracks your daily habits, and helps you overcome procrastination with simple, step-by-step guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

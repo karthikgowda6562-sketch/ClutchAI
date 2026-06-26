@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom glassmorphism and ambient glow utilities conforming to the Frosted Glass design specifications */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(24, 24, 27, 0.08);
+  box-shadow: 0 10px 25px -5px rgba(24, 24, 27, 0.04), 0 8px 16px -6px rgba(24, 24, 27, 0.02);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(24, 24, 27, 0.06);
+  box-shadow: 0 4px 12px -2px rgba(24, 24, 27, 0.02);
+}
+
+.glowing-cyan {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.12); /* Adapted to Frosted Indigo vibe */
+}
+
+.glowing-rose {
+  box-shadow: 0 0 20px rgba(244, 63, 94, 0.15);
+}
+
+/* Ambient glow mesh sphere */
+.ambient-glow {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(99, 102, 241, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scrollbar styling for a high-end feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 24, 27, 0.08);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(24, 24, 27, 0.15);
+}
+
+/* Equalizer animations */
+@keyframes bounce {
+  0%, 100% { height: 4px; }
+  50% { height: 24px; }
+}
+
+.eq-bar {
+  width: 3px;
+  background-color: #6366f1;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.eq-bar:nth-child(2) { animation-delay: 0.15s; }
+.eq-bar:nth-child(3) { animation-delay: 0.3s; }
+.eq-bar:nth-child(4) { animation-delay: 0.45s; }
+.eq-bar:nth-child(5) { animation-delay: 0.05s; }
